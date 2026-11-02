@@ -43,7 +43,7 @@ class Program
         return square;
     }
 
-    // Accepts name as string and square number as integer
+    // Accepts name as string and square number as int
     static void DisplayResult(string name, int squaredNumber)
     {
         Console.WriteLine($"{name}, the square of your number is {squaredNumber}");
