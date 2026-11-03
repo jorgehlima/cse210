@@ -13,7 +13,7 @@ class Program
         job1._endYear = 2022;
 
         // Displays company name
-        Console.WriteLine(job1._company);
+        job1.Display();
 
         Job job2 = new Job();
 
@@ -23,7 +23,7 @@ class Program
         job2._endYear = 2023;
 
         // Displays a sec co name
-        Console.WriteLine(job2._company);
+        job2.Display();
 
     }
 }
