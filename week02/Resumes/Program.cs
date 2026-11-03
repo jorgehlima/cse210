@@ -25,5 +25,14 @@ class Program
         // Displays a sec co name
         job2.Display();
 
+        // Resume obj
+        Resume myResume = new Resume();
+        // Person's name
+        myResume._name = "Allison Rose";
+        // Adding job objs
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        Console.WriteLine(myResume._jobs[0]._jobTitle);
     }
 }
