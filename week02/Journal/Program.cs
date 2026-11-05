@@ -1,5 +1,4 @@
 using System;
-
 using System.Collections.Generic;
 
 class Program
@@ -69,7 +68,8 @@ class Program
             }
 
             // EXCEEDING REQUIREMENTS
-            // I added the exception below that handles wrong file names on option 3.
+            // I added the exception below that handles load option 3.
+            // If the user enters a wrong file name the program return an error message.
             // Load saved journal - error handling during file load.
             else if (choice == "3")
             {
