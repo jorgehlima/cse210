@@ -12,6 +12,7 @@ public class Journal
     {
         _entries.Add(newEntry);
     }
+    
     //DisplayAll() method
     public void DisplayAll()
     {
