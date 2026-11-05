@@ -1,12 +1,14 @@
 using System;
+
 // Entry class
 public class Entry
-{   // Attributes
+{
+    // Attributes
     public string _date = "";
     public string _promptText = "";
     public string _entryText = "";
 
-    //Display() method
+    // Display() method
     public void Display()
     {
         Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
