@@ -1,5 +1,7 @@
 using System;
 
+using System.Collections.Generic;
+
 class Program
 {
     static void Main(string[] args)
@@ -7,8 +9,22 @@ class Program
         Journal myJournal = new Journal();
         string choice = "";
 
+        // Prompts list
+        List<string> prompts = new List<string>
+        {
+            "What was the best part of your day?",
+            "What positive thing happened today?",
+            "What challenges did you face today?",
+            "What did you learn today?",
+            "What are you grateful for today?"
+        };
+
+        // Random num generator
+        Random random = new Random();
+
         Console.WriteLine("Welcome to the Journal Program!");
 
+        // While loop
         while (choice != "5")
         {
             Console.WriteLine();
@@ -21,6 +37,28 @@ class Program
             Console.Write("What would you like to do? ");
 
             choice = Console.ReadLine() ?? "";
+
+            if (choice == "1")
+            {
+                int index = random.Next(prompts.Count);
+                string prompt = prompts[index];
+
+                Console.WriteLine(prompt);
+                Console.Write("> ");
+                string response = Console.ReadLine() ?? "";
+
+                DateTime currentDate = DateTime.Now;
+                string date = currentDate.ToShortDateString();
+
+                Entry newEntry = new Entry();
+                newEntry._date = date;
+                newEntry._promptText = prompt;
+                newEntry._entryText = response;
+
+                myJournal.AddEntry(newEntry);
+
+                Console.WriteLine("Journal entry added successfully!");
+            }
         }
     }
 }
