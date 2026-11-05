@@ -59,6 +59,27 @@ class Program
 
                 Console.WriteLine("Journal entry added successfully!");
             }
+
+            // Display option
+            else if (choice == "2")
+            {
+                Console.WriteLine();
+                Console.WriteLine("Your Journal Entries:");
+                myJournal.DisplayAll();
+            }
+
+            
+
+            // Save option
+            else if (choice == "4")
+            {
+                Console.Write("What is the filename? ");
+                string filename = Console.ReadLine() ?? "";
+
+                myJournal.SaveToFile(filename);
+
+                Console.WriteLine("Journal saved successfully!");
+            }
         }
     }
 }
