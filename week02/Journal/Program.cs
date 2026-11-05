@@ -68,7 +68,24 @@ class Program
                 myJournal.DisplayAll();
             }
 
-            
+            // EXCEEDING REQUIREMENTS
+            // I added the exception below that handles wrong file names on option 3.
+            // Load saved journal - error handling during file load.
+            else if (choice == "3")
+            {
+                Console.Write("What is the filename? ");
+                string filename = Console.ReadLine() ?? "";
+
+                try
+                {
+                    myJournal.LoadFromFile(filename);
+                    Console.WriteLine("Journal loaded successfully!");
+                }
+                catch (System.IO.FileNotFoundException)
+                {
+                    Console.WriteLine("Error: The file was not found. Please check the filename.");
+                }
+            }
 
             // Save option
             else if (choice == "4")
