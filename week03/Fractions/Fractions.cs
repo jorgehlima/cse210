@@ -35,4 +35,28 @@ public class Fraction
     {
         _top = top;
     }
+
+    // Getter for denominator
+    public int GetBottom()
+    {
+        return _bottom;
+    }
+
+    // Setter for the denominator
+    public void SetBottom(int bottom)
+    {
+        _bottom = bottom;
+    }
+
+    // Returns fraction as string
+    public string GetFractionString()
+    {
+        return $"{_top}/{_bottom}";
+    }
+
+    // Returns decimal value of the fraction
+    public double GetDecimalValue()
+    {
+        return (double)_top / _bottom;
+    }
 }
